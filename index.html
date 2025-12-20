@@ -1,55 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mike's Demo Site</title>
+  <title>Mike Chen - 作品集</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #8b5cf6;
+      --accent-color: #ec4899;
+      --dark-bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-light: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #212529;
-      /* 深色背景 */
-      color: #f8f9fa;
-      /* 淺色文字 */
+      font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1f3a 100%);
+      color: var(--text-light);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    a {
-      color: #ffc107;
-      /* 超連結文字顏色 */
+    /* 導航列 */
+    .navbar {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Hero 區域 */
+    .hero-section {
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .hero-description {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    /* 作品集區域 */
+    .portfolio-section {
+      padding: 60px 0 100px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
+    }
+
+    /* 作品卡片 */
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+      border-color: var(--primary-color);
+    }
+
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      background: #0a0e1a;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.9) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .view-project-btn {
+      padding: 12px 30px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
       text-decoration: none;
-      /* 移除底線 */
+      display: inline-block;
+      transition: all 0.3s ease;
+      transform: translateY(20px);
     }
 
-    a:hover {
-      text-decoration: underline;
-      /* 滑鼠懸停時顯示底線 */
+    .project-card:hover .view-project-btn {
+      transform: translateY(0);
+    }
+
+    .view-project-btn:hover {
+      background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+      color: white;
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+    }
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      padding: 0.4rem 1rem;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary-color);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    /* 動畫 */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* 響應式設計 */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .project-image {
+        height: 200px;
+      }
+    }
+
+    /* 滾動條樣式 */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--dark-bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
     }
   </style>
 </head>
 
 <body>
-  <div class="container py-5">
-    <h1 class="text-center mb-4">This is Mike's Demo Site</h1>
-    <p class="text-center">Welcome to my demo site! Here you can find various examples and projects I've worked on.</p>
+  <!-- 導航列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mike Chen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">作品集</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <h2 class="mt-5">Projects</h2>
-    <ul class="list-group">
-      <li class="list-group-item bg-dark text-light">
-        <a href="https://mikekychen.github.io/meles" target="_blank">Meles Inc. 形象網站</a>
-      </li>
-    </ul>
-    <ul class="list-group">
-      <li class="list-group-item bg-dark text-light">
-        <a href="https://mikekychen.github.io/pokemon" target="_blank">Pokemon 對戰遊戲</a>
-      </li>
-    </ul>
-  </div>
+  <!-- Hero 區域 -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Hi, I'm Mike Chen</h1>
+      <p class="hero-subtitle">Web Developer & Designer</p>
+      <p class="hero-description">
+        熱愛創造優質的網頁體驗，專注於前端開發與互動設計。<br>
+        以下是我的精選作品，展示了我在網頁開發領域的技能與創意。
+      </p>
+    </div>
+  </section>
 
-  <!-- Bootstrap JS (optional, for interactive components) -->
+  <!-- 作品集區域 -->
+  <section id="projects" class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">精選作品</h2>
+      <div class="row g-4">
+
+        <!-- 作品 1: Meles Inc. -->
+        <div class="col-lg-6 col-md-12">
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <img src="./images/meles.PNG" alt="Meles Inc. 形象網站">
+              <div class="project-overlay">
+                <a href="https://mikekychen.github.io/meles" target="_blank" class="view-project-btn">
+                  查看專案
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Meles Inc. 形象網站</h3>
+              <p class="project-description">
+                企業形象網站設計，打造專業且現代化的品牌形象。採用響應式設計，提供絕佳的跨裝置瀏覽體驗。
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">RWD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 作品 2: Pokemon -->
+        <div class="col-lg-6 col-md-12">
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <img src="./images/pokemon.PNG" alt="Pokemon 對戰遊戲">
+              <div class="project-overlay">
+                <a href="https://mikekychen.github.io/pokemon" target="_blank" class="view-project-btn">
+                  查看專案
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Pokemon 對戰遊戲</h3>
+              <p class="project-description">
+                互動式 Pokemon 對戰遊戲，結合遊戲邏輯與動畫效果。實現了完整的戰鬥系統與精美的視覺呈現。
+              </p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Game Dev</span>
+                <span class="tag">Animation</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mike Chen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // 平滑滾動
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // 滾動動畫
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 
 </html>
