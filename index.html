@@ -243,6 +243,33 @@
       color: var(--text-muted);
     }
 
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .contact-link:hover {
+      color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .contact-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
     /* 動畫 */
     @keyframes fadeInUp {
       from {
@@ -326,8 +353,8 @@
       <h1 class="hero-title">Hi, I'm Mike Chen</h1>
       <p class="hero-subtitle">Web Developer & Designer</p>
       <p class="hero-description">
-        熱愛創造優質的網頁體驗，專注於前端開發與互動設計。<br>
-        以下是我的精選作品，展示了我在網頁開發領域的技能與創意。
+        熱愛創造優質的網頁體驗，專注於前後端開發與互動設計。<br>
+        以下是我在緯創期間抽空做的 Side Projects，展示了我在網頁開發領域的技能與創意。
       </p>
     </div>
   </section>
@@ -350,15 +377,19 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Meles Inc. 形象網站</h3>
+              <h3 class="project-title">Meles Inc. 形象網站 <span
+                  style="font-size: 0.7rem; color: var(--text-muted);">（一頁式網站）</span></h3>
               <p class="project-description">
-                企業形象網站設計，打造專業且現代化的品牌形象。採用響應式設計，提供絕佳的跨裝置瀏覽體驗。
+                企業形象網站設計，打造專業且現代化的品牌形象。採用響應式設計，提供絕佳的跨裝置瀏覽體驗。<br><br>
+
+                <em style="color: var(--text-muted); font-size: 0.9rem;">※ 純前端一頁式網站，使用平滑滾動與錨點導航，展現簡潔優雅的設計風格。</em>
               </p>
               <div class="project-tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">RWD</span>
+                <span class="tag">One Page</span>
               </div>
             </div>
           </div>
@@ -376,18 +407,23 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Pokemon 對戰遊戲</h3>
+              <h3 class="project-title">Pokemon 對戰遊戲 <span
+                  style="font-size: 0.7rem; color: var(--text-muted);">（全端專案）</span></h3>
               <p class="project-description">
                 「融合經典與創新的網頁版寶可夢對戰系統」<br><br>
 
                 本作品是一款純網頁開發的互動式寶可夢遊戲，核心設計深度致敬早期 Gameboy 的經典懷舊風格，並完美融合現代 Pokémon Ga-Olé
-                機台的戰鬥邏輯與震撼動畫。在復刻完整戰鬥系統的基礎上，我更注入了獨特的自創機制與視覺巧思，將兒時的夢想轉化為具體的遊戲體驗，實現了對自製遊戲的極致追求。
+                機台的戰鬥邏輯與震撼動畫。在復刻完整戰鬥系統的基礎上，我更注入了獨特的自創機制與視覺巧思，將兒時的夢想轉化為具體的遊戲體驗，實現了對自製遊戲的極致追求。<br><br>
+
+                <em style="color: var(--text-muted); font-size: 0.9rem;">※ 本專案透過 PokeAPI 取得寶可夢資料，玩家資料儲存於瀏覽器
+                  LocalStorage，可直接線上遊玩。</em>
               </p>
               <div class="project-tags">
                 <span class="tag">TypeScript</span>
                 <span class="tag">Vue</span>
                 <span class="tag">Vite</span>
-                <span class="tag">Node.js</span>
+                <span class="tag">PokeAPI</span>
+                <span class="tag">LocalStorage</span>
                 <span class="tag">Animation</span>
                 <span class="tag">UI/UX</span>
               </div>
@@ -395,13 +431,67 @@
           </div>
         </div>
 
+        <!-- 作品 3: QR Code 點餐系統 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <img src="./images/ordering-system.png" alt="QR Code 點餐系統">
+              <div class="project-overlay">
+                <div class="view-project-btn" style="background: rgba(148, 163, 184, 0.8); cursor: not-allowed;">
+                  需後端伺服器
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">QR Code 點餐系統 <span
+                  style="font-size: 0.7rem; color: var(--text-muted);">（全端專案）</span></h3>
+              <p class="project-description">
+                全方位餐廳數位化解決方案，整合顧客點餐、廚房管理、收銀結帳與數據分析四大核心功能。<br><br>
+
+                採用現代化 UI 設計（漸層背景、毛玻璃效果、流暢動畫），提供直覺的操作體驗。支援 QR Code 掃碼點餐、即時訂單更新、多維度數據統計與圖表分析。整合拖曳式菜單管理、圖片上傳（Imgur）與 JWT
+                身份驗證，完整實現餐廳經營所需的前後台功能。<br><br>
+
+                <em style="color: var(--text-muted); font-size: 0.9rem;">※ 本專案需搭配後端伺服器（Express +
+                  MongoDB）運行，無法直接透過靜態網頁瀏覽。</em>
+              </p>
+              <div class="project-tags">
+                <span class="tag">Vue 3</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">JWT</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">QR Code</span>
+                <span class="tag">RWD</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+    </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <div class="contact-links">
+        <a href="mailto:mikekychen@gmail.com" class="contact-link" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+          mikekychenwistron@gmail.com
+        </a>
+        <a href="https://gitlab.com/mikekychen" target="_blank" class="contact-link" title="GitLab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.6004 9.5927L23.5794 9.52792L20.1044 0.722949C20.0168 0.503514 19.8602 0.319946 19.6582 0.199222C19.4567 0.0779865 19.2208 0.0253331 18.9846 0.0493859C18.7484 0.0734387 18.5252 0.173009 18.3468 0.334458C18.1685 0.495907 18.044 0.711602 17.9914 0.950648L15.6384 9.00104H8.36138L6.00838 0.950648C5.95577 0.711602 5.83126 0.495907 5.65292 0.334458C5.47458 0.173009 5.25142 0.0734387 5.01523 0.0493859C4.77904 0.0253331 4.54308 0.0779865 4.34157 0.199222C4.14006 0.319946 3.98344 0.503514 3.89582 0.722949L0.418822 9.52792L0.397822 9.5927C-0.0981779 10.8907 -0.128178 12.3177 0.276822 13.6367C0.681822 14.9557 1.49682 16.0927 2.58982 16.8647L2.59682 16.8697L2.61382 16.8817L8.04782 20.8927L10.6618 22.7387L11.8218 23.6047C12.0048 23.7407 12.2238 23.8137 12.4488 23.8137C12.6738 23.8137 12.8928 23.7407 13.0758 23.6047L14.2358 22.7387L16.8498 20.8927L22.3028 16.8667L22.3108 16.8597C23.4028 16.0867 24.2168 14.9497 24.6208 13.6307C25.0258 12.3117 24.9948 10.8857 24.5298 9.5877L23.6004 9.5927Z" />
+          </svg>
+          GitLab
+        </a>
+      </div>
       <p>&copy; 2025 Mike Chen. All rights reserved.</p>
     </div>
   </footer>
