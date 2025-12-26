@@ -1,0 +1,93 @@
+{
+  "_version": 1,
+  "_comment": "自訂寶可夢檔案 - 修改後請增加 _version 版本號",
+  "_usage": "在此新增自訂寶可夢，ID 建議使用 5000 以上避免與官方衝突（官方目前到 1025，預留空間給未來新增）",
+  "_example": {
+    "5001": {
+      "name": {
+        "zh": "自訂寶可夢",
+        "en": "custom-pokemon"
+      },
+      "imgUrl": "images/custom/pokemon/5001.png",
+      "hpBase": 100,
+      "atkBase": 120,
+      "defBase": 80,
+      "types": [
+        "fire",
+        "dragon"
+      ],
+      "evoTarget": null,
+      "megaTarget": null,
+      "gmaxTarget": null
+    }
+  },
+  "5000": {
+    "name": {
+      "zh": "黃金龍",
+      "en": "golden-dragon"
+    },
+    "imgUrl": "images/custom/pokemon/5000.png",
+    "hpBase": 250,
+    "atkBase": 200,
+    "defBase": 200,
+    "types": [
+      "light",
+      "dragon"
+    ],
+    "evoTarget": {
+      "id": "5001",
+      "name": {
+        "zh": "黃金聖龍",
+        "en": "golden-saint-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5001.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5001": {
+    "name": {
+      "zh": "黃金聖龍",
+      "en": "golden-saint-dragon"
+    },
+    "imgUrl": "images/custom/pokemon/5001.png",
+    "hpBase": 300,
+    "atkBase": 250,
+    "defBase": 250,
+    "types": [
+      "light",
+      "dragon"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5002",
+      "name": {
+        "zh": "超級黃金聖龍",
+        "en": "Mega golden-saint-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5002.png",
+      "hpBase": 400,
+      "atkBase": 400,
+      "defBase": 300,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    },
+    "gmaxTarget": {
+      "id": "5003",
+      "name": {
+        "zh": "超極巨黃金聖龍",
+        "en": "Gigantamax golden-saint-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5003.png",
+      "hpBase": 500,
+      "atkBase": 350,
+      "defBase": 500,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    }
+  }
+}
