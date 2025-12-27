@@ -89,5 +89,87 @@
         "dragon"
       ]
     }
+  },
+  "5004": {
+    "name": {
+      "zh": "青眼白龍",
+      "en": "blue-eyes-white-dragon"
+    },
+    "imgUrl": "images/custom/pokemon/5004.png",
+    "hpBase": 250,
+    "atkBase": 200,
+    "defBase": 200,
+    "types": [
+      "light",
+      "dragon"
+    ],
+    "evoTarget": {
+      "id": "5005",
+      "name": {
+        "zh": "青眼雙爆裂龍",
+        "en": "blue-eyes-twin-burst-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5005.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5005": {
+    "name": {
+      "zh": "青眼雙爆裂龍",
+      "en": "blue-eyes-twin-burst-dragon"
+    },
+    "imgUrl": "images/custom/pokemon/5005.png",
+    "hpBase": 300,
+    "atkBase": 250,
+    "defBase": 250,
+    "types": [
+      "light",
+      "dragon"
+    ],
+    "evoTarget": {
+      "id": "5006",
+      "name": {
+        "zh": "青眼究極龍",
+        "en": "blue-eyes-ultimate-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5006.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5006": {
+    "name": {
+      "zh": "青眼究極龍",
+      "en": "blue-eyes-ultimate-dragon"
+    },
+    "imgUrl": "images/custom/pokemon/5006.png",
+    "hpBase": 400,
+    "atkBase": 350,
+    "defBase": 400,
+    "types": [
+      "light",
+      "electric",
+      "dragon"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5007",
+      "name": {
+        "zh": "超級青眼金鎧龍",
+        "en": "Mega blue-eyes-golden-armored-dragon"
+      },
+      "imgUrl": "images/custom/pokemon/5007.png",
+      "hpBase": 450,
+      "atkBase": 450,
+      "defBase": 500,
+      "types": [
+        "light",
+        "electric",
+        "steel",
+        "dragon"
+      ]
+    },
+    "gmaxTarget": null
   }
 }
