@@ -1,7 +1,8 @@
 {
-  "_version": 1,
+  "_version": 2,
   "_comment": "自訂寶可夢檔案 - 修改後請增加 _version 版本號",
   "_usage": "在此新增自訂寶可夢，ID 建議使用 5000 以上避免與官方衝突（官方目前到 1025，預留空間給未來新增）",
+  "_balance_note": "數值參考：普通寶可夢總和200-400，最終進化400-540，傳說580-680，Mega約+100",
   "_example": {
     "5001": {
       "name": {
@@ -27,9 +28,9 @@
       "en": "golden-dragon"
     },
     "imgUrl": "images/custom/pokemon/5000.png",
-    "hpBase": 250,
-    "atkBase": 200,
-    "defBase": 200,
+    "hpBase": 85,
+    "atkBase": 95,
+    "defBase": 80,
     "types": [
       "light",
       "dragon"
@@ -51,9 +52,9 @@
       "en": "golden-saint-dragon"
     },
     "imgUrl": "images/custom/pokemon/5001.png",
-    "hpBase": 300,
-    "atkBase": 250,
-    "defBase": 250,
+    "hpBase": 106,
+    "atkBase": 134,
+    "defBase": 100,
     "types": [
       "light",
       "dragon"
@@ -66,9 +67,9 @@
         "en": "Mega golden-saint-dragon"
       },
       "imgUrl": "images/custom/pokemon/5002.png",
-      "hpBase": 400,
-      "atkBase": 400,
-      "defBase": 300,
+      "hpBase": 106,
+      "atkBase": 174,
+      "defBase": 120,
       "types": [
         "light",
         "dragon"
@@ -81,9 +82,9 @@
         "en": "Gigantamax golden-saint-dragon"
       },
       "imgUrl": "images/custom/pokemon/5003.png",
-      "hpBase": 500,
-      "atkBase": 350,
-      "defBase": 500,
+      "hpBase": 106,
+      "atkBase": 134,
+      "defBase": 130,
       "types": [
         "light",
         "dragon"
@@ -96,9 +97,9 @@
       "en": "blue-eyes-white-dragon"
     },
     "imgUrl": "images/custom/pokemon/5004.png",
-    "hpBase": 250,
-    "atkBase": 200,
-    "defBase": 200,
+    "hpBase": 80,
+    "atkBase": 100,
+    "defBase": 85,
     "types": [
       "light",
       "dragon"
@@ -120,9 +121,9 @@
       "en": "blue-eyes-twin-burst-dragon"
     },
     "imgUrl": "images/custom/pokemon/5005.png",
-    "hpBase": 300,
-    "atkBase": 250,
-    "defBase": 250,
+    "hpBase": 95,
+    "atkBase": 125,
+    "defBase": 100,
     "types": [
       "light",
       "dragon"
@@ -144,9 +145,9 @@
       "en": "blue-eyes-ultimate-dragon"
     },
     "imgUrl": "images/custom/pokemon/5006.png",
-    "hpBase": 400,
-    "atkBase": 350,
-    "defBase": 400,
+    "hpBase": 110,
+    "atkBase": 150,
+    "defBase": 120,
     "types": [
       "light",
       "dragon"
@@ -159,9 +160,9 @@
         "en": "Mega blue-eyes-golden-armored-dragon"
       },
       "imgUrl": "images/custom/pokemon/5007.png",
-      "hpBase": 450,
-      "atkBase": 450,
-      "defBase": 500,
+      "hpBase": 110,
+      "atkBase": 170,
+      "defBase": 150,
       "types": [
         "light",
         "dragon"
