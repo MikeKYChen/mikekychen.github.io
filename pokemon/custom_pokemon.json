@@ -149,7 +149,6 @@
     "defBase": 400,
     "types": [
       "light",
-      "electric",
       "dragon"
     ],
     "evoTarget": null,
@@ -165,8 +164,6 @@
       "defBase": 500,
       "types": [
         "light",
-        "electric",
-        "steel",
         "dragon"
       ]
     },
