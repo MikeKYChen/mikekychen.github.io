@@ -169,5 +169,98 @@
       ]
     },
     "gmaxTarget": null
+  },
+  "5008": {
+    "name": {
+      "zh": "悟空",
+      "en": "goku"
+    },
+    "imgUrl": "images/custom/pokemon/5008.png",
+    "hpBase": 90,
+    "atkBase": 110,
+    "defBase": 90,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5009",
+      "name": {
+        "zh": "超二悟空",
+        "en": "super-saiyan-2-goku"
+      },
+      "imgUrl": "images/custom/pokemon/5009.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5009": {
+    "name": {
+      "zh": "超二悟空",
+      "en": "super-saiyan-2-goku"
+    },
+    "imgUrl": "images/custom/pokemon/5009.png",
+    "hpBase": 105,
+    "atkBase": 135,
+    "defBase": 105,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5010",
+      "name": {
+        "zh": "超三悟空",
+        "en": "super-saiyan-3-goku"
+      },
+      "imgUrl": "images/custom/pokemon/5010.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5010": {
+    "name": {
+      "zh": "超三悟空",
+      "en": "super-saiyan-3-goku"
+    },
+    "imgUrl": "images/custom/pokemon/5010.png",
+    "hpBase": 120,
+    "atkBase": 160,
+    "defBase": 125,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5011",
+      "name": {
+        "zh": "超藍悟空",
+        "en": "Mega super-saiyan-blue-goku"
+      },
+      "imgUrl": "images/custom/pokemon/5011.png",
+      "hpBase": 120,
+      "atkBase": 190,
+      "defBase": 150,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    },
+    "gmaxTarget": {
+      "id": "5012",
+      "name": {
+        "zh": "超四悟空",
+        "en": "Gigantamax super-saiyan-4-goku"
+      },
+      "imgUrl": "images/custom/pokemon/5012.png",
+      "hpBase": 120,
+      "atkBase": 160,
+      "defBase": 160,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    }
   }
 }
