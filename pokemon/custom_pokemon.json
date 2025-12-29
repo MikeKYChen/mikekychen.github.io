@@ -262,5 +262,98 @@
         "dragon"
       ]
     }
+  },
+  "5013": {
+    "name": {
+      "zh": "路飛",
+      "en": "luffy"
+    },
+    "imgUrl": "images/custom/pokemon/5013.png",
+    "hpBase": 80,
+    "atkBase": 95,
+    "defBase": 85,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5014",
+      "name": {
+        "zh": "二檔路飛",
+        "en": "second-gear-luffy"
+      },
+      "imgUrl": "images/custom/pokemon/5014.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5014": {
+    "name": {
+      "zh": "二檔路飛",
+      "en": "second-gear-luffy"
+    },
+    "imgUrl": "images/custom/pokemon/5014.png",
+    "hpBase": 90,
+    "atkBase": 115,
+    "defBase": 90,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5015",
+      "name": {
+        "zh": "三檔路飛",
+        "en": "third-gear-luffy"
+      },
+      "imgUrl": "images/custom/pokemon/5015.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5015": {
+    "name": {
+      "zh": "三檔路飛",
+      "en": "third-gear-luffy"
+    },
+    "imgUrl": "images/custom/pokemon/5015.png",
+    "hpBase": 105,
+    "atkBase": 135,
+    "defBase": 100,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5017",
+      "name": {
+        "zh": "五檔路飛",
+        "en": "Mega fifth-gear-luffy"
+      },
+      "imgUrl": "images/custom/pokemon/5017.png",
+      "hpBase": 115,
+      "atkBase": 165,
+      "defBase": 125,
+      "types": [
+        "light",
+        "psychic"
+      ]
+    },
+    "gmaxTarget": {
+      "id": "5016",
+      "name": {
+        "zh": "四檔路飛",
+        "en": "Gigantamax fourth-gear-luffy"
+      },
+      "imgUrl": "images/custom/pokemon/5016.png",
+      "hpBase": 120,
+      "atkBase": 145,
+      "defBase": 135,
+      "types": [
+        "light",
+        "psychic"
+      ]
+    }
   }
 }
