@@ -269,8 +269,8 @@
       "en": "luffy"
     },
     "imgUrl": "images/custom/pokemon/5013.png",
-    "hpBase": 80,
-    "atkBase": 95,
+    "hpBase": 85,
+    "atkBase": 100,
     "defBase": 85,
     "types": [
       "light",
@@ -293,9 +293,9 @@
       "en": "second-gear-luffy"
     },
     "imgUrl": "images/custom/pokemon/5014.png",
-    "hpBase": 90,
-    "atkBase": 115,
-    "defBase": 90,
+    "hpBase": 95,
+    "atkBase": 120,
+    "defBase": 95,
     "types": [
       "light",
       "fighting"
@@ -317,9 +317,9 @@
       "en": "third-gear-luffy"
     },
     "imgUrl": "images/custom/pokemon/5015.png",
-    "hpBase": 105,
-    "atkBase": 135,
-    "defBase": 100,
+    "hpBase": 110,
+    "atkBase": 145,
+    "defBase": 110,
     "types": [
       "light",
       "fighting"
@@ -332,9 +332,9 @@
         "en": "Mega fifth-gear-luffy"
       },
       "imgUrl": "images/custom/pokemon/5017.png",
-      "hpBase": 115,
-      "atkBase": 165,
-      "defBase": 125,
+      "hpBase": 180,
+      "atkBase": 180,
+      "defBase": 144,
       "types": [
         "light",
         "psychic"
@@ -347,9 +347,9 @@
         "en": "Gigantamax fourth-gear-luffy"
       },
       "imgUrl": "images/custom/pokemon/5016.png",
-      "hpBase": 120,
-      "atkBase": 145,
-      "defBase": 135,
+      "hpBase": 140,
+      "atkBase": 160,
+      "defBase": 140,
       "types": [
         "light",
         "psychic"
