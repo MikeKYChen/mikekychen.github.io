@@ -355,5 +355,98 @@
         "psychic"
       ]
     }
+  },
+  "5018": {
+    "name": {
+      "zh": "鳴人",
+      "en": "naruto"
+    },
+    "imgUrl": "images/custom/pokemon/5018.png",
+    "hpBase": 80,
+    "atkBase": 95,
+    "defBase": 85,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5019",
+      "name": {
+        "zh": "仙人模式鳴人",
+        "en": "sage-mode-naruto"
+      },
+      "imgUrl": "images/custom/pokemon/5019.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5019": {
+    "name": {
+      "zh": "仙人模式鳴人",
+      "en": "sage-mode-naruto"
+    },
+    "imgUrl": "images/custom/pokemon/5019.png",
+    "hpBase": 95,
+    "atkBase": 130,
+    "defBase": 95,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": {
+      "id": "5020",
+      "name": {
+        "zh": "九喇嘛模式鳴人",
+        "en": "kurama-mode-naruto"
+      },
+      "imgUrl": "images/custom/pokemon/5020.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5020": {
+    "name": {
+      "zh": "九喇嘛模式鳴人",
+      "en": "kurama-mode-naruto"
+    },
+    "imgUrl": "images/custom/pokemon/5020.png",
+    "hpBase": 135,
+    "atkBase": 175,
+    "defBase": 140,
+    "types": [
+      "light",
+      "fighting"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5021",
+      "name": {
+        "zh": "六道仙人模式鳴人",
+        "en": "six-path-sage-mode-naruto"
+      },
+      "imgUrl": "images/custom/pokemon/5021.png",
+      "hpBase": 180,
+      "atkBase": 220,
+      "defBase": 204,
+      "types": [
+        "light",
+        "psychic"
+      ]
+    },
+    "gmaxTarget": {
+      "id": "5022",
+      "name": {
+        "zh": "重粒子模式鳴人",
+        "en": "Baryon-mode-naruto"
+      },
+      "imgUrl": "images/custom/pokemon/5022.png",
+      "hpBase": 210,
+      "atkBase": 180,
+      "defBase": 220,
+      "types": [
+        "light",
+        "psychic"
+      ]
+    }
   }
 }
