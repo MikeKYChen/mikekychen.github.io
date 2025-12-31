@@ -448,5 +448,74 @@
         "psychic"
       ]
     }
+  },
+  "5023": {
+    "name": {
+      "zh": "納茲",
+      "en": "natsu"
+    },
+    "imgUrl": "images/custom/pokemon/5023.png",
+    "hpBase": 95,
+    "atkBase": 120,
+    "defBase": 95,
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "evoTarget": {
+      "id": "5024",
+      "name": {
+        "zh": "雷炎龍模式納茲",
+        "en": "thunderflame-dragon-mode-natsu"
+      },
+      "imgUrl": "images/custom/pokemon/5024.png"
+    },
+    "megaTarget": null,
+    "gmaxTarget": null
+  },
+  "5024": {
+    "name": {
+      "zh": "雷炎龍模式納茲",
+      "en": "thunderflame-dragon-mode-natsu"
+    },
+    "imgUrl": "images/custom/pokemon/5024.png",
+    "hpBase": 110,
+    "atkBase": 145,
+    "defBase": 110,
+    "types": [
+      "fire",
+      "electric"
+    ],
+    "evoTarget": null,
+    "megaTarget": {
+      "id": "5025",
+      "name": {
+        "zh": "龍之力模式納茲",
+        "en": "dragon-force-mode-natsu"
+      },
+      "imgUrl": "images/custom/pokemon/5025.png",
+      "hpBase": 180,
+      "atkBase": 180,
+      "defBase": 144,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    },
+    "gmaxTarget": {
+      "id": "5026",
+      "name": {
+        "zh": "炎龍王模式納茲",
+        "en": "fire-dragon-king-mode-natsu"
+      },
+      "imgUrl": "images/custom/pokemon/5026.png",
+      "hpBase": 140,
+      "atkBase": 160,
+      "defBase": 140,
+      "types": [
+        "light",
+        "dragon"
+      ]
+    }
   }
 }
